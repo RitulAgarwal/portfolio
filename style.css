@@ -1,0 +1,673 @@
+*{
+    margin : 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* .contain img{
+    float: right;
+    margin-right: 40px;
+} */
+
+body{
+    background: black;  /*background oclour*/
+    color: white; /*text colour*/
+}
+/* # header because its an id*/
+
+#header{
+    width: 100%;
+    height: 100vh;
+    /* margin-right: 200px; */
+    background-image: url(images/images/hash.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+.container{
+    padding: 2px 5%;
+} 
+
+nav{
+    overflow: hidden    ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+   width:170px;
+    height:80px;
+    float: left;
+    /* left: 150%; */
+    animation: rotation 2s ; /*linear;*/
+}
+
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+nav ul li {
+    /* height : 5px; */
+    display: inline-block;
+    list-style: none;
+    margin: 0px 12px;
+    /* align-items: flex-end; */
+    /* margin-right: 60px;
+    
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; */
+    /* margin-left: auto;  */
+}
+nav ul li a{
+    /* padding: 10px; */
+    color: wheat;
+    text-decoration: none;
+    font-size: 25px;
+    position: relative;
+    display: block;
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+nav ul li a::after{
+    content: '';
+    /* width: 100%;  MEANS ALWAYS VISIBLE*/
+    width: 0; /* means always hidden AND TO SHOW UNDERLINE WHEN WE HOVER ONLY*/
+    height: 2px;
+    background:goldenrod;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s; 
+}
+/* when we hover the underline would be visible*/
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 40px;
+    height: 200px;
+    margin-left: 5%;
+    /* text-align: right; */
+    /* padding-top: 60%; */
+    width: max-content; 
+    /* padding-left: 150%;   */
+}
+.header-text h1{
+    font-size: 80px;
+    margin-top: 20px;
+}
+
+.header-text h1 span{
+    color: olivedrab;
+    animation: fadeIn 3s;
+} 
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+.header-text h1 span:hover{
+    color: chocolate;
+}
+
+/* about */
+
+#about{
+    padding: 80px 0;
+    color: tan;
+    /* margin-left: 10px; */
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 60%;
+    /* margin-left: 20px; */
+}
+
+.about-col-2{
+    flex-basis: 30%;
+    /* margin-right: 20px; */
+}
+
+.about-col-2 img{
+    width: 100%;
+    /* margin-right: 50px; */
+    border-radius: 20px;
+}
+.Subtitle{
+    font-size: 65px;
+    font-weight: 450;
+    color: tan;
+}
+.gray{
+    /* margin: 5px; */
+   font-size: 25px;
+    color: antiquewhite;
+    /* position: relative; */
+    /* top: 500px;  */
+}
+
+.workList{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 80px;
+    margin-top: 20px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.btn23{
+    display: block;
+    margin: 10px auto;
+    color: black;
+    background:tan;
+    font-size: 20px;
+    border: 2px solid orange;
+    width: fit-content;
+      padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+
+    
+    transition: background 0.5s;
+}
+
+.btn:hover{
+    background: orange;
+}
+
+.layer{
+    width: 100%;
+    /* height: 100%; */
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), orange);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 30px;
+    transition: height 0.8s;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layer{
+    height: 100%;
+}
+.layer h3{
+    font-weight: 100px;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 60px;
+    background: black;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+
+}
+
+
+.secondSection .box{
+    background-color: antiquewhite;
+    width: 90%;
+
+    height: 3px;
+    align-self: center;
+    margin: 90px 3px 300px;
+    display: flex;
+}
+.secondSection .vertical{
+    height: 78px;
+    width: 3px;
+    position: relative;
+    background-color: antiquewhite;
+    margin: 0 120px;
+}
+.secondSection .vertical1{
+    height: 400px;
+    width: 1px;
+    position: relative;
+    background-color: wheat;
+    /* margin: 0 100px; */
+}
+.vertical-title2{
+    position: relative;
+    top: 300px;
+    margin: 250px;
+    font-size: 18px;
+    width: 200px;
+}
+
+.flexImg{
+    display: flex;
+    /* left: 100px;         */
+}
+
+.flexImg1{
+    display: flex;
+    left: 10px;
+    right: -20px;        
+}
+.img-top3{
+    width: 70px;
+    height: 100px;
+    position: relative;
+    top : 250px;
+}
+
+.img-top2{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: -40px;
+    right: 30px;
+    /* left: -20px; */ 
+}
+
+.img-top1{
+    width: 90px;
+    height: 70px;
+    position: relative;
+    top: -70px;
+    /* right: 34px; */
+    left: -50px; 
+}
+.img-top1:hover {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+
+.img-top{
+    width: 40px;
+    height: 60px;
+    position: relative;
+    top: -40px;
+    left: -20px;
+}
+.vertical-title{
+    /* position: relative; */
+    /* top: 5px; */
+    margin:10px;
+    font-size: 18px;
+    width: 190px;
+}
+.vertical-title1{
+    position: relative;
+    bottom: 35px;
+    margin: 10px;
+    font-size: 18px;
+    width: 201px;
+}
+.vertical-describe1{
+    position: relative;
+    /* bottom: 160px; */
+    top: -30px;
+    color: bisque;
+    width: 220px;
+    font-size: 15px;
+}
+.vertical-describe{
+    position: relative;
+    top: 20px;
+    color: bisque;
+    width: 200px;
+    font-size: 15px;
+}
+.para{
+    margin-top: 3%;
+    color: antiquewhite;
+    /* padding-left: 15px; */
+    font-size: 20px;
+    line-height: 1.32;
+}
+
+.tab-titles{
+    color: tan;
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tabLinks{
+    margin-left: 50px;
+    font-size: 30px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tabLinks::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: antiquewhite;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: 0.5s;
+}
+
+.tabLinks.active::after{
+    width: 70%;
+}
+
+.tab-contains ul li{
+    list-style: none;
+    margin: 10px 0;
+    font-size: 22px;
+}
+
+.tab-contains ul li span{
+    color: blanchedalmond;
+    /* color: rgb(255, 187, 0);     */
+    font-size: 24px;
+}
+.tab-contains{
+    display: none; /*hides all*/
+
+}
+.tab-contains.active-tab{
+    display: block;
+}
+
+/* contact */
+.contact-left{
+    flex-basis: 35%;
+    /* margin-left: 20px; */
+}
+.contact-left p{
+    margin-top: 30px;
+    /* margin-right: 20px; */
+}
+
+.contact-left p i{
+    color: orange;
+    font-size: 20px;
+}
+/* .social-actions{
+    margin-top: 20px;
+} */
+.social-actions a{
+    text-decoration: none;
+    font-size: 25px;
+    margin-right: 15px;
+    color: antiquewhite;
+    transition: transform 0.5s;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+.social-actions a:hover{
+    color: orange;
+    transform: translateY(-10px);
+}
+
+.contact-right{
+    flex-basis: 60%;
+    margin-right: 20px;
+}
+
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: tan;
+    font-size: 18px;
+    border-radius: 6px;
+
+}
+
+
+.btn2{
+    display: inline-block;
+    margin: 15px 10px;
+    font-size: 30px;
+    background: rgb(21, 63, 21);
+    width: fit-content;
+    justify-content: space-between;
+    border: 1.7px solid tan;
+    padding: 7px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: wheat;
+    
+    /* transition: background 0.5s; */
+}
+.btn2:hover{
+    background: olive;
+    font-size: 28px;
+    /* margin-top: 20px; */
+    cursor: pointer;
+}
+/* .secondSection h1{
+    font-size: 1.9rem;
+    color: tan;
+} */
+
+.btn{
+    display: inline-block;
+    margin: 20px auto;
+    background: tan;
+    width: fit-content;
+    border: 2px solid orange;
+    padding: 14px 40px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: black;
+    
+    transition: background 0.5s;
+}
+
+.btn:hover{
+    background: orange;
+}
+
+.btn.btn2{
+    display: inline-block;
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form.btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 15px;
+}
+
+.copyright i{
+    color: orange;    
+}
+
+nav .fas{
+    display: none;
+}
+
+
+/* css media queries for small screens */
+@media only screen and (max-width: 420px ){
+    #header{
+        background-image: url(images/pho.jpeg);
+        width: 100%;
+        height: 100vh;
+        /* margin-left: px; */
+    }
+    .header-text{
+        display:inline-block;
+        margin-top: 10%;
+        /* margin-left: 12px; */
+        font-size: 15px;
+    }
+    .header-text h1{
+        font-size:30px;
+    }
+
+    .header-text h1 span{
+        color: orangered;
+        animation: fadeIn 3s;
+    }
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+    .header-text h1 span:hover{
+        color: chocolate;
+    }
+
+    .container{
+        padding: 0.5% 1%;
+    } 
+    
+    .btn2{
+        display: block;
+        margin: 15px 10px;
+        font-size: 15px;
+        
+        } 
+
+        .btn2:hover{
+            background: olive;
+            font-size: 17px;
+            /* margin-top: 20px; */
+            cursor: pointer;
+        }
+        
+    .logo{
+        width:170px;
+         height:70px;
+         float: left;
+         /* left: 150%; */
+     }
+    nav .fas{
+        color: orange;
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul{
+        background: cornsilk ;
+        position: fixed;
+        top: 0;
+        right: -200px; 
+        /* bcoz width 200 so colse  */
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul li a{
+        color: orange;
+    }
+
+.tab-contains ul li{
+    list-style: none;
+    /* margin: 10px 0; */
+    font-size: 14px;
+}
+
+.tab-contains ul li span{
+    color: blanchedalmond;
+    /* color: rgb(255, 187, 0);     */
+    font-size: 16px;
+}
+    nav ul.fas{
+        
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .Subtitle{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 98%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tabLinks{
+        font-size: 14px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 98%;
+    }
+
+
+} 
+
+
+#msf{
+    color: tan;
+    margin-top: -10px;
+    display: block;
+}

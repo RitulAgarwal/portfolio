@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+        <title>Portfolio Website</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <!-- <style type="text/css"></style> -->
+        <script src="https://kit.fontawesome.com/3a9c11dc84.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+    <div id="header">
+        <div class="container">
+            <nav>                
+                <img src="images/logo.png"  class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about"> Why Me </a></li>
+                    <li><a href="#WorkEx"> My Work</a></li>
+                    <!-- <li><a href="#about">Skills</a></li> -->
+                    <li><a href="#contact">Let's Talk</a></li>
+
+                    <!-- this is done for smaller screen to open close menu or nav bar
+                    hidden using css for full screen  -->
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+ 
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+        </div>
+
+
+            <div class="header-text">
+                <p>CSE @ NSUT ' 25 | DSA enthusiast | ML developer</p>
+                <h1>Hi I'm  <span id="element"></span></h1>
+                <div class="buttons">
+                    <!-- <a href="resumeALLELNFEJF (4).pdf" download class="btn">Download CV</a> -->
+                    <a href="resumeR1.pdf" download class="btn2">Download Resume</a>
+                    <a href="https://github.com/RitulAgarwal" target="_blank" class="btn2">Visit Github</a>
+                </div>
+            </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <h1 class="Subtitle">A Formal Introduction</h1>
+                    <p class="para"> I'm a Tech enthusiast who likes to engineer things & solve problems, it feels good if they are real world. 
+                        Striving to get better at engineering, exploring tech stacks, and aiming to be a skillful software developer.
+                        A 4th yr undergraduate student, with goals up my eyes I'm currently immersed in the coding world of LeetCode. 
+                        Fascinated with Machine Learning and its infinte potential, have researched at various labs & companies. 
+                        Inquisitive about the backend, exploring Django and making full stack projects is something I enjoy lately.
+                    </p>
+                        <div class="tab-titles">
+                            
+                            
+                            <p class="tabLinks active " onclick="opentab('skills')"> Skills</p>
+                            <p class="tabLinks"  onclick="opentab('exp')" > Experience</p>
+                            <p class="tabLinks" onclick="opentab('educ')"> Education</p>
+
+                        </div>
+                        
+                        <div class="tab-contains active-tab"  id="skills">
+                            <ul>
+                                <li><span>Problem Solver</span> (Data Structures & Algorithms)<br>CPP & Python Programmer</li>
+                                <!-- <li><span>Front end Systems</span><br>Basic Front End D</li> -->
+                                <li><span>Machine Learning Developer</span>  (Pytorch, Keras, ML, DL)<br> Models & Pipeline Development, Dataset Curation<br>& Preprocessing, Data Analysis, Finetuning</li>
+                                <li><span>Aspiring Backend Developer</span>  (Django, HTML, CSS, JS) <br> Full stack Projects with frontend through HTML, CSS & JS, Backend functionality through Django</li>
+
+                            </div>
+
+                        <div class="tab-contains " id="exp">
+                            <ul>
+                                <li><span>May'24 - Jul'24</span><br> University Of Oxford (Department Of Engineering Science)<br> AI/ML project researcher</li>
+                                <!-- <li><span>Front end Systems</span><br>Basic Front End D</li> -->
+                                <li><span>May'23 - Sep'23</span><br> IIIT - Delhi (Cross Caps Laboratory)<br> Research Intern</li>
+                                <li><span>Mar'23 - May'23</span><br> NSUT (Department Of CSE)<br>Undergrad. Project Assistant</li>
+                                <li><span>Sep'22 - Feb'23</span><br> Neurally (Startup)<br> Research Intern</li>
+
+
+                            </div>
+
+                        
+
+                        
+
+                        <div class="tab-contains" id="educ">
+                            <ul>
+                                <li><span>Netaji Subhas University Of Technology<br>CGPA : 8.35</span><br>(B.Tech in Computer Science, specialisation in Data Science)<br>Jan'22 - May'25</li>
+                                <!-- <li><span>Front end Systems</span><br>Basic Front End D</li> -->
+                                <li><span>Ryan International School<br> XII th : 95 % <br> X th : 97.5 % </span><br> 2009 - 2021</li>
+                        </div>
+                </div>
+                <div class="about-col-2">
+                    <img src="images/image.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="WorkEx">
+        <div class="container">
+        <section class="secondSection">
+            
+            <h1 class="Subtitle">Projects & Experience</h1>    <br>
+            <span class="gray"> My tech journey so far </span>
+            <div class="box">
+                <div class="vertical">
+                    <img class="img-top1" src="images/images/fine.png">
+                    <div class="vertical-title1">University Of Oxford, Project Researcher (May'24)</div>
+                    <div class="vertical-describe1"> Finetuning a large model like GPT on a small dataset like reddit text has overfitting problem. Task specific parameter optimisation (NFL) can be performed. LoRA technique with optimial hyperparameters for universal solution. 
+                    </div>
+                </div><div class="vertical">
+                    <img class="img-top1" src="images/images/aud.png">
+                    <div class="vertical-title1">Cross Caps Lab IIITD, ML developer (May'23)</div>
+                    <div class="vertical-describe1">Took charge from data preperation, model curation to pipeline deployment. Researched on Audio and Diffusion Models for cross lingual speech to speech translation without text involvement. Implemented various research papers. 
+                    </div>
+                </div><div class="vertical">
+                        <img class="img-top1" src="images/images/face.png">
+                    <div class="vertical-title1">CSE Dept. NSUT, Research Asst (Mar-May'23), Present</div>
+                    <div class="vertical-describe1">Worked on improving Motion Blurred Face Hallucination with proximate patches thresholding by appling atmospheric dehazing and acheived 3% accuracy enhancement.  
+                    </div>
+                </div>
+                <!-- <div class="vertical1">
+                    <img class="img-top3" src="images/images/ml.png">
+                    <div class="vertical-title2"> Student Intern(Sep'22)</div>
+                    <div class="vertical-describe2">Worked collaboratively on multiple projects like Face Swapper, various ML model paradigms like auto-encoders, GANs, UNet. Time series forecasting, visualisation & EDA of datasets, Transfer learning were used.    
+                    </div>
+                </div> -->
+                <div class="vertical">
+                    <img class="img-top1" src="images/images/ml.png">
+                    <div class="vertical-title1"> Neurally,   &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Student Intern (Sep'22)</div>
+                    <div class="vertical-describe1">Worked collaboratively on multiple projects like Face Swapper, various ML model paradigms like auto-encoders, GANs, UNet. Time series forecasting, visualisation & EDA of datasets, Transfer learning were used.    
+                    </div>
+                </div>
+                <div class="vertical">
+                    <div class="flexImg">
+                        <img class="img-top1" src="images/images/py.png">
+                        <img class="img-top1" src="images/images/c.png">
+                    </div>
+                    <div class="vertical-title1">Programmer (Jan'22)</div>
+                    <div class="vertical-describe1">Started Learning Python & C. Gained hands-on Object Oriented Programming Experience with Rocket Tracker, Jarvis assistant, Web scraping. Studied ML &   DL specialisation courses.  
+                    </div>
+                </div>
+            </div>
+        </section>
+        </div>
+    </div>
+
+    <div id="portfolio">
+        <div class="container">
+            <span class="gray"> Projects Made on the way </span>
+            <div class="workList">
+                <div class="work">
+                    <img src="images/shop.png" alt="">
+                    <div class="layer">
+                        <h3> ShopIt Website</h3>
+                        <p> Just another E-Commerce Platform.</p>
+                        <a  href="https://github.com/RitulAgarwal" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/f.jpg" alt="">
+                    <div class="layer">
+                        <h3> Face Swapper </h3>
+                        <p> Swapping the faces tool </p>
+                        <a  href="https://github.com/RitulAgarwal" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/match.png" alt="">
+                    <div class="layer">
+                        <h3> Player Analyser</h3>
+                        <p> Finding  out Team Breaker </p>
+                        <a  href="https://github.com/RitulAgarwal" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="https://github.com/RitulAgarwal" target="_blank" class="btn23"> Explore More!!</a>
+        </div>
+    </div>
+
+
+    <!-- contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="Subtitle"> Contact Me</h1>
+                    <p><i class="fa-regular fa-envelope"></i></i>     ritul.agarwal.ug21@nsut.ac.in</p>
+                    <p><i class="fa-solid fa-phone"></i></i>     +91 9560300905</p>
+                    <div class="social-actions">
+                        <!-- <a href="tel:+919560300905"> call US </a> -->
+                        <a href="https://www.linkedin.com/in/ritul-agarwal1702/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/RitulAgarwal"><i class="fa-brands fa-github"></i></a>
+                        <a href = "mailto:ritulagarwal17@gmail.com"> <i class="fa-solid fa-envelope-open"></i></i></a>
+                        <a href="https://wa.me/919560300905"><i class="fa-brands fa-whatsapp"></i></a>
+                        
+                    </div>
+                    <a href="resumeR1.pdf" download class="btn">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" style="color:black;" class="btn btn2" > Submit</button>
+                    </form>
+                    <span id="msf"></span>
+                </div>
+
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Made with <i class="fa-solid fa-code"></i> by Ritul</p>
+        </div>
+    </div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tabLinks");
+        var tabcontents = document.getElementsByClassName("tab-contains");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.left="0";
+        }
+        function closemenu(){
+            sidemenu.style.left ="-200px";
+        }
+    </script>
+   
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxsFLqJpslccxgAPcxWDX5UbINbeAZmKQXP1ejYpYqbBX4RGe5edA5FPHGpxquEDbB4hw/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msf")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        // .then(response => console.log('Success!', response))
+        .then(response => {
+            msg.innerHTML = " Message Sent Successfully !!"
+            setTimeout(function(){
+                msg.innerHTML=""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+    var typed = new Typed('#element', {
+      strings: [ ' Ritul Agarwal.', 'a software developer.', 'a ML developer.' , 'Ritul Agarwal.'],
+      typeSpeed: 65
+    });
+  </script>
+</body>
+
+
+    </body>
+  </html>
